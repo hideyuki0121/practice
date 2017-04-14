@@ -12,6 +12,7 @@ int  main(void)
   printf("vx * vy = %d\n",vx * vy);
   printf("vx / vy = %d\n",vx / vy);
   printf("vx %% vy = %d\n",vx % vy);
-    
+  printf("vx + vx = %d\n",vx +vx);
+  
   return 0;
 }

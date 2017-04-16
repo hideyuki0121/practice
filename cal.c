@@ -35,6 +35,7 @@ int  main(void)
   int x, y;
 
   puts("二つの整数を入力してください");
+<<<<<<< HEAD
   printf("整数x:");   scanf("%d", &x );
   printf("整数y:");   scanf("%d", &y );
   
@@ -59,6 +60,17 @@ int  main(void)
 
     printf("符号を反転した値は%dです。\n", -num);
   
+=======
+  printf("整数vx:");   scanf("%d", &vx);
+  printf("整数vy:");   scanf("%d", &vy);
+
+  printf("vx + vy = %d\n",vx + vy);
+  printf("vx - vy = %d\n",vx - vy);
+  printf("vx * vy = %d\n",vx * vy);
+  printf("vx / vy = %d\n",vx / vy);
+  printf("vx %% vy = %d\n",vx % vy);
+  printf("vx + vx = %d\n",vx +vx);
+>>>>>>> 75ef526719a5861898282f98a84d0ed3a643b1f1
   
   return 0;
 				     

@@ -53,6 +53,7 @@ int  main(void)
   printf("それらの和は%dで積は%dです。\n", A + B, A * B);
   */
 
+  /*
     int num;
 
     printf("整数を入力してください:");
@@ -71,7 +72,35 @@ int  main(void)
   printf("vx %% vy = %d\n",vx % vy);
   printf("vx + vx = %d\n",vx +vx);
 >>>>>>> 75ef526719a5861898282f98a84d0ed3a643b1f1
+  */
+  /*
+  int a, b;
+
+  puts("二つの整数を入力してください");
+  printf("整数a:");   scanf("%d", &a);
+  printf("整数b:");   scanf("%d", &b);
+
+  printf("それらの平均は%dです\n", ( a + b) / 2);
+  */
+  /*
+  int n;
+  double x;
+
+  n = 9.99;
+  x = 9.99;
+
+  printf("int型の変数　nの値: %d\n", n);
+  printf("n / 2 :%d\n", n / 2);
   
+  printf("double型の変数xの値: %f\n", x);
+  printf("x / 2 :%f\n", x / 2.0);
+  */
+
+  double vx;
+
+  printf("実数を入力してください:\n");   scanf("%lf", &vx);
+  printf("あなたは%fと入力しましたね。", vx);
+
   return 0;
 				     
 }

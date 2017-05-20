@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main(void)
+int main()
 {
   int no;
   printf("整数を入力してください\n>");
@@ -43,7 +43,18 @@ int main(void)
     min = n3;
   
   printf("最大値は%d、最小値は%dです。", max ,min);
+ 
+  
+  while(1){
+    int a;
 
-  return 0;
+    puts("plz tell me your lucky number!");
+    scanf("%d", &a);
+  
+    switch(a % 2){
+    case 0 : printf("%d is even number!\n", a); break;
+    case 1 : printf("%d is odd number!\n", a); break;
+
+    }
+  }
 }
-

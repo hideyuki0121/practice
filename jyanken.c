@@ -19,7 +19,7 @@ int main(){
   user_hand =0;
  
   while (user_hand == 0){
-    printf("please input your hand\n> ");
+    printf("please input your hand\n> x");
     scanf("%s", input_hand);
 
     if (!strcmp(input_hand,"rock"))user_hand = 1;

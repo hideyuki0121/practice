@@ -12,11 +12,11 @@ int main (){
   printf("parcentage each year(%%)\n> ");  scanf("%lf", &i);
   
   int y = 0;
-  while(y < n){
+  /*while(y < n){
     p = (double)p * (1.0 + 0.01 * i );
     y++;
   }
-  
+  */
   printf("your found will be %d yen by %d year(s).\n", p, n);
   
   y = 0;

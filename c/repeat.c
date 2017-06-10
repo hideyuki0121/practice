@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main(void)
 {
-  int retry;
+  /* int retry;
   do {
     int no;
     printf("整数を入力してください\n > ");
@@ -36,6 +36,58 @@ int main(void)
   } while(num == 0);
 
   printf("合計は%dで平均は%.2fです。\n", sum, (double)sum / cnt);
+
+  //読み込んだ正の整数値までカウントアップ
+
+  int i, n;
+
+  printf("カウントアップします。正の整数を入力してください\n> ");
+  scanf("%d", &n);
+
+  i = 0;
+  while(i <= n){
+    printf("%d\n", i++);
+  }
+  printf("\n");
+ */  
+  //＊を連続表示
+
+  int n2;
+
+  printf("正の整数を入力してください\n > ");
+  scanf("%d", &n2);
+
+  while (n2-- > 0)
+    putchar('*');
+  putchar('\n');
+
+  int no2;
+
+  do {
+    printf("正の整数を入力してください\n > ");
+    scanf("%d", &no2);
+    if (no2 <= 0)
+      puts("正の数以外を入れないでください ");
+  }while(no2 <= 0);
+
+  printf("逆から読むと");
+  while(no2  > 0){
+    printf("%d", no2 % 10);
+    no2 /= 10;
+  }
+  
+  puts("ってなるけどそれがどうした？");
+
+  int i, j;
+
+
+  puts("20掛ける20の計算の表示をします");
+  for(i = 1; i <= 20; i++){
+    for(j = 1; j <= 20; j++)
+      printf("%3d ", i * j);
+    putchar('\n');
+
+  }
   
   return 0;
 }

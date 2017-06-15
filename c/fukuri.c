@@ -9,7 +9,7 @@ int main (){
 
   printf("how match your first money ?\n> ");  scanf("%d", &p);
   printf("how long?\n> ");  scanf("%d", &n);
-  printf("parcentage each year(%%)\n> ");  scanf("%lf", &i);
+  printf("parcentage every year(%%)\n> ");  scanf("%lf", &i);
   
   int y = 0;
   /*while(y < n){

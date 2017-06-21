@@ -16,12 +16,16 @@ int main(){
   
   int user_hand;
   char input_hand[10];
-  user_hand =0;
-  int n = 0;
-
+  user_hand = 0;
+  int n = 0; //続けるか判断
+  int w = 0; //勝った場合
+  int l = 0; //負けた場合
+  int d = 0; //引き分け
+  
   do{
   
     while (user_hand == 0){
+      puts("----------------------------");
       printf("please input your hand\n> ");
       scanf("%s", input_hand);
 
@@ -38,15 +42,21 @@ int main(){
     case 0:
       printf("user = %d : cpu = %d\n", user_hand, cpu_hand);
       puts("DRAW!!");
+      d++;
       break;
     case 1:
       printf("user = %d : cpu = %d\n", user_hand, cpu_hand);
       puts("YOU LOSE");
+      l++;
       break;
     case 2:
       printf("user = %d : cpu = %d\n", user_hand, cpu_hand);
       puts("YOU WIN !!");
+      w++;
+      break;
     }
+
+    printf("#your score#\n[WIN  :%d]\n[LOSE :%d]\n[DRAW :%d]\n", w, l, d);
     
     printf("play again?[yes...0/no...9] \n> ");
     scanf("%d", &n);

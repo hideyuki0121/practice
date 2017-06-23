@@ -2,6 +2,17 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
+int set_hand(const char* src){
+  static const  char* check_list[][5] = {
+    {"rock", "Rock", "ROCK", "goo", NULL},
+    {"scissors","Scissors", "SCISSORS", "choki",NULL},
+    {"paper", "Paper", "PAPER", "paa", NULL },
+  };
+  for(int i = 0; i < 3; i++)
+    for(int j = 0; check_list[i][j] != NULL; j++)
+      if(!strmp(src,check_list[i][j])) return i+1;
+  return HAND_FALSE;
+}
 
 int main(){
 
@@ -29,9 +40,10 @@ int main(){
       printf("please input your hand\n> ");
       scanf("%s", input_hand);
 
-      if (!strcmp(input_hand,"rock"))user_hand = 1;
-      else if (!strcmp(input_hand,"scissors"))user_hand = 2;
-      else if (!strcmp(input_hand,"paper"))user_hand = 3;
+      // if (!strcmp(input_hand,"rock"))user_hand = 1;
+      //else if (!strcmp(input_hand,"scissors"))user_hand = 2;
+      //else if (!strcmp(input_hand,"paper"))user_hand = 3;
+      user_hand = set_hand(input_hand);
     }
 
     int cpu_hand = (int)rand() % 3 + 1;

@@ -15,15 +15,20 @@
 */
 int main(void)
 {
+  int ch;
   FILE *fp;
 
   fp = fopen("subject.c", "r");
 
-  if(fp = NULL)
+  if(fp == NULL)
     printf("ファイルをオープンできませんでした\n");
   else{
     printf("ファイルをオープンしました\n");
+    while ((ch = fgetc(fp)) != EOF)
+      putchar(ch);
+    
     fclose(fp);
+    puts("ファイルをクローズしました");
   }
   return 0;
 }

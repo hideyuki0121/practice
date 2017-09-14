@@ -17,10 +17,6 @@
 
 */
 
-int null(void)
-{
-  //null文字を飛ばす（何もしない）
-}
 
 int main(void)
 {
@@ -41,14 +37,15 @@ int main(void)
       fclose(fp);
   */
 
-  char input_s[2048];
+  char input_s[3072];
   int i;
   int buff;
   char ch;
-  for (i = 0; i < 2047 && (buff = fgetc(fp)) != EOF; i++) {
+  for (i = 0; i < 3071 && (buff = fgetc(fp)) != EOF; i++) {
     ch = (char)buff;
     input_s[i] = ch;
   }
+  input_s[i] = '\0';
   printf("%s", input_s);
   /* while(1){ */
   /*   if((ch = fgetc(fp)) == ' '); */
@@ -57,5 +54,18 @@ int main(void)
   /*     putchar(ch); */
   /* } */
   fclose(fp);
+
+  char input[3072];//受け皿を設けてこっちに書く？
+  int n = 0;
+  for (i = 0; input_s[i] != '\0' ; i++)
+    if(input_s[i] == ' ') ;
+    else if(input_s[i] == '\n');
+    else{
+      input[n] = input_s[i];
+      n++;
+    }
+  input[n] = '\0';
+  printf("%s", input);
+  
   return 0;
 }
